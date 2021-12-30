@@ -18,13 +18,10 @@
     <div class="add-btn-container">
         <button class="add-button" id="addBtn">Add Book</button>
     </div>
-
     <div id="card-container" class="cards">
-
     </div>
 
-
-    <div class="modal-container" id="modalContainer">
+    <div class=" modal-container" id="modalContainer">
         <div class="modal">
             <div class="modal-header">
                 <h3 class="modal-title">Add new book</h3>
@@ -33,18 +30,18 @@
                 <form class="modal-form" id="modalForm">
                     <div>
                         <label for="title">Title:</label>
-                        <input type="text" class="title-input" id="titleInput">
+                        <input type="text" class="title-input" id="titleInput" name="title">
                     </div>
                     <div>
                         <label for="author">Author:</label>
-                        <input type="text" class="author-input" id="authorInput">
+                        <input type="text" class="author-input" id="authorInput" name="author">
                     </div>
                     <div class="have-read">
                         <label for="have-read">Have you read it?</label>
                         <input class="checkbox" type="checkbox" id="haveRead" />
                     </div>
                     <div class="btn-container">
-                        <button type="button" class="modal-add-btn" id="modalAddBtn">Add book</button>
+                        <button type="submit" class="modal-add-btn" id="modalAddBtn">Add book</button>
                         <button class="cancel-btn" id="cancelBtn">Cancel</button>
                     </div>
                 </form>

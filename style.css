@@ -41,11 +41,17 @@ header {
     /* align-content: space-evenly;   */
 }
 
-.book-card {
+.card-div {
     border: 1px solid #000;
     height: 200px;
     width: 150px;
     margin-top: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.delete-btn {
+    
 }
 
 
@@ -61,7 +67,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    display: none;
+    visibility: hidden;
 }
 
 .modal {
@@ -89,8 +95,8 @@ header {
     padding: 15px;
 }
 
-.modal-title h3 {
-}
+/* .modal-title h3 {
+} */
 
 .modal-content {
     padding: 20px;
@@ -127,8 +133,14 @@ header {
 
 
 .modal-container.visible {
-    display: block;
+    visibility: visible;
 }
+
+
+
+
+
+
 
 
 
