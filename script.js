@@ -11,6 +11,7 @@ const modalForm = document.getElementById('modalForm');
 
 
 
+
 // Book constructor
 function Book(title, author) {
   this.title = title
@@ -42,26 +43,52 @@ form.addEventListener('submit', (event) => {
   const cardInsideDiv = document.createElement('div');
   cardDiv.appendChild(cardInsideDiv).className = 'card-inside-div';
   const titleTag = document.createElement('h2');
-  cardInsideDiv.appendChild(titleTag);
+  cardInsideDiv.appendChild(titleTag).className = 'book-title';
   const authorTag = document.createElement('p');
-  cardInsideDiv.appendChild(authorTag);
+  cardInsideDiv.appendChild(authorTag).className = 'author-title';
+
+  
+
+ 
+
 
   const deleteBtn = document.createElement('button');
-  cardInsideDiv.appendChild(deleteBtn).className = 'delete-btn';
-  deleteBtn.textContent = 'Remove';
 
-  
-  
-  
-  
+
+  cardInsideDiv.appendChild(deleteBtn).className = 'far fa-times-circle delete-btn';
+  const readEl = document.createElement('button');
+  cardInsideDiv.appendChild(readEl).className = 'read-btn';
   
   deleteBtn.addEventListener('click', removeBtn);
   function removeBtn() {
+
+
     cardDiv.style.display = 'none';
   }
 
 
-  
+  if (checkBox.checked) {
+    readEl.textContent = 'Read'
+    readEl.classList.add('read');
+  } else {
+    readEl.textContent = 'Not Read'
+    readEl.classList.add('not-read');
+  }
+
+  readEl.addEventListener('click', function () {
+      if (readEl.textContent === 'Read') {
+        readEl.classList.remove('read');
+        readEl.classList.add('not-read');
+        readEl.textContent = 'Not Read';
+      } else {
+        readEl.classList.add('read');
+        readEl.classList.remove('not-read');
+        readEl.textContent = 'Read'
+      }
+  });
+
+
+
 
 
   function displayCard(array) {
@@ -83,15 +110,27 @@ modalForm.reset();
 
 
 
-function modalOpen() {
+function modalOpen () {
   let modalContainer = document.getElementById('modalContainer')
   modalContainer.classList.add('visible');
 }
 
-function closeModal() {
+function closeModal(e) {
+  e.preventDefault();
+  modalForm.reset();
   let modalContainer = document.getElementById('modalContainer')
   modalContainer.classList.remove('visible');
 }
 
 addBookBtn.addEventListener('click', modalOpen);
 cancelBtn.addEventListener('click', closeModal);
+
+
+
+
+
+
+
+
+
+
