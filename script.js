@@ -8,6 +8,7 @@ const removeBtn = document.getElementById('removeBtn');
 const singleCard = document.getElementById('singleCard');
 const checkBox = document.getElementById('haveRead');
 const modalForm = document.getElementById('modalForm');
+const dropDownBtn = document.getElementById('drop-down-btn');
 
 
 
@@ -107,6 +108,31 @@ displayCard(book);
 modalForm.reset();
 
 });
+
+
+
+// Arrow drop down
+
+dropDownBtn.addEventListener('click', () => {
+
+  
+
+      addBookBtn.style.animation = "dropDownAnimation .3s forwards"
+      addBookBtn.classList.add('after-click');
+      // addBookBtn.style.zIndex = '1';
+});
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

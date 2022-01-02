@@ -20,8 +20,9 @@ header {
     text-align: center;
     margin-bottom: 15px;
     padding: 40px;
-    background-color:  #194350;
+    background-color: #194350;
     position: relative;
+
 }
 
 .header-title {
@@ -31,19 +32,24 @@ header {
     color: #fff;
     text-decoration: underline;
     text-decoration-thickness: 5%;
-    
+
 }
+
+.header-btn:active {}
+
+/* Drop down button */
 
 .drop-down-btn {
     font-size: 26px;
     position: absolute;
     left: 50%;
-    top: 80%;
+    top: 82%;
     transform: translateX(-50%);
     background-color: transparent;
     border: none;
     color: #143139;
     cursor: pointer;
+    /* animation: dropDownAnimation 1s ease; */
 }
 
 .drop-down-btn:hover {
@@ -51,10 +57,43 @@ header {
 }
 
 
+@keyframes dropDownAnimation {
+    from {
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    25% {
+        z-index: 1;
+        opacity: .2;
+    }
 
-.header-btn:active {
+    50% {
+        z-index: 1;
+        opacity: .4;
+    }
+
+    75% {
+        z-index: 1;
+        opacity: .6;
+    }
+
+    90% {
+        opacity: .8;
+        z-index: 1;
+    }
+
+    to {
+        opacity: 1 ;
+        z-index: 1 ;
+
+    }
+
 
 }
+
+
+
 
 .add-btn-container {
     text-align: center;
@@ -71,10 +110,19 @@ header {
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     outline: 2px solid #000;
+    position: absolute;
+    left: 50%;
+    top: 73%;
+    transform: translateX(-50%);
+    z-index: -1;
+    opacity: 0;
 }
 
-.add-button:active {
+.add-button.after-click {
+    z-index: 1;
 }
+
+.add-button:active {}
 
 /* Cards */
 .cards {
@@ -97,9 +145,7 @@ header {
     position: relative;
 }
 
-.card-div:hover {
-   
-}
+.card-div:hover {}
 
 
 
@@ -109,7 +155,7 @@ header {
     animation-duration: .2s;
     animation-direction: reverse;
     animation-timing-function: ease-in;
-    
+
 }
 
 @keyframes closeBtnAnimation {
@@ -209,7 +255,7 @@ header {
 
 .modal-header {
     background-color: #194350;
-    
+
 }
 
 .modal-title {
@@ -226,7 +272,7 @@ header {
     text-align: center;
 }
 
-.modal-form input{
+.modal-form input {
     margin-bottom: 20px;
     border-radius: 4px;
     padding: 5px;
@@ -259,31 +305,23 @@ header {
 
 .modal-container.visible {
     visibility: visible;
-    
+
 }
 
-.modal-container.visible .modal  {
+.modal-container.visible .modal {
     animation: slide-in-bottom 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    
+
 }
 
 
 @keyframes slide-in-bottom {
     0% {
-      transform: translateY(1000px);
-      opacity: 0;
+        transform: translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
-
-
-
-
-
-
-
-
+}
