@@ -32,7 +32,7 @@ header {
     color: #fff;
     text-decoration: underline;
     text-decoration-thickness: 5%;
-    padding: 30px;
+    padding: 25px;
 
 }
 
@@ -53,12 +53,54 @@ header {
     
 }
 
+.drop-down-btn-anim {
+animation-name: arrowUpBtnAnim;
+animation-duration: .5s;
+animation-fill-mode: forwards;
+}
+
+.down-btn-anim {
+animation-name: arrowDownBtnAnim;
+animation-duration: .5s;
+animation-fill-mode: forwards;
+}
+
 .drop-down-btn:hover {
     color: #000709;
 }
 
+.down-btn {
+    font-size: 26px;
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    transform: translateX(-50%) rotate(180deg);
+    background-color: transparent;
+    border: none;
+    color: #000709;
+    cursor: pointer;
+}
 
-@keyframes addBtnAnimation {
+
+
+
+
+.add-btn-anim-down {
+    animation-name: addBtnAnimationDown;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+.add-btn-anim-up {
+    animation-name: addBtnAnimationUp;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes addBtnAnimationDown {
     from {
         opacity: 0;
         z-index: -1;
@@ -88,13 +130,51 @@ header {
     to {
         opacity: 1 ;
         z-index: 1 ;
-
+        top: 110%;
     }
 
 
 }
 
-@keyframes arrowBtnAnimation {
+
+
+@keyframes addBtnAnimationUp {
+    from {
+        opacity: 1;
+        z-index: 1;
+        top: 110%;
+    }
+    
+    25% {
+        z-index: 1;
+        opacity: .8;
+    }
+
+    50% {
+        z-index: 1;
+        opacity: .6;
+    }
+
+    75% {
+        z-index: 1;
+        opacity: .4;
+    }
+
+    90% {
+        opacity: .2;
+        z-index: 1;
+    }
+
+    to {
+        opacity: 0 ;
+        z-index: -1 ;
+        
+        top: 75%;
+    }
+
+
+}
+@keyframes arrowUpBtnAnim {
     from {
         transform: translateX(-50%) rotate(0deg)   ;
         position: absolute;
@@ -123,6 +203,41 @@ header {
         position: absolute;
         left: 50%;
         top: 82%;
+        color: #000709;
+        /* visibility: hidden; */
+    }
+}
+
+@keyframes arrowDownBtnAnim {
+    from {
+        transform: translateX(-50%) rotate(180deg)   ;
+        position: absolute;
+        left: 50%;
+        top: 82%;
+    }
+    
+    /* 25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(60deg);
+    }
+
+    75% {
+        transform: rotate(90deg);
+    }
+
+    90% {
+        transform: rotate(150deg);
+    } */
+
+    to {
+        transform: translateX(-50%)  rotate(0deg) ;
+        position: absolute;
+        left: 50%;
+        top: 82%;
+        color: #143139;
     }
 }
 
@@ -146,7 +261,7 @@ header {
     outline: 2px solid #000;
     position: absolute;
     left: 50%;
-    top: 73%;
+    top: 75%;
     transform: translateX(-50%);
     z-index: -1;
     opacity: 0;

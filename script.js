@@ -10,6 +10,8 @@ const checkBox = document.getElementById('haveRead');
 const modalForm = document.getElementById('modalForm');
 const dropDownBtn = document.getElementById('drop-down-btn');
 
+// const downBtn = document.getElementById('down-btn');
+
 
 
 
@@ -113,12 +115,51 @@ modalForm.reset();
 
 // Arrow drop down
 
-dropDownBtn.addEventListener('click', () => {
+dropDownBtn.addEventListener('click', (e) => {
 
-      dropDownBtn.style.animation = 'arrowBtnAnimation .7s forwards'
 
-      // addBookBtn.style.animation = 'addBtnAnimation .3s forwards'
-      addBookBtn.classList.add('after-click');
+      if (dropDownBtn.classList.contains('drop-down-btn-anim')) {
+        dropDownBtn.classList.remove('drop-down-btn-anim');
+        dropDownBtn.classList.add('down-btn-anim');
+        // dropDownBtn.classList.remove('down-btn-anim');
+        
+        
+      
+        addBookBtn.classList.remove('add-btn-anim-down');
+        addBookBtn.classList.add('add-btn-anim-up');
+
+
+      
+
+
+
+        
+        // dropDownBtn.style.animation = 'arrowDownBtnAnim .5s forwards'
+        
+    
+      } else if (dropDownBtn.classList.contains('down-btn-anim')) {
+        dropDownBtn.classList.remove('down-btn-anim');
+        dropDownBtn.classList.add('drop-down-btn-anim');
+        addBookBtn.classList.remove('add-btn-anim-up');
+        addBookBtn.classList.add('add-btn-anim-down');
+        
+      }
+      
+      
+      
+      else {
+        // dropDownBtn.style.animation = 'arrowUpBtnAnim .5s forwards'
+        
+        addBookBtn.classList.add('add-btn-anim-down');
+        dropDownBtn.classList.add('drop-down-btn-anim');
+        // dropDownBtn.classList.remove('drop-down-anim');
+        
+
+      }
+
+     
+
+      
 });
 
 
