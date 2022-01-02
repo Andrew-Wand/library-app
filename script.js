@@ -115,11 +115,10 @@ modalForm.reset();
 
 dropDownBtn.addEventListener('click', () => {
 
-  
+      dropDownBtn.style.animation = 'arrowBtnAnimation .7s forwards'
 
-      addBookBtn.style.animation = "dropDownAnimation .3s forwards"
+      // addBookBtn.style.animation = 'addBtnAnimation .3s forwards'
       addBookBtn.classList.add('after-click');
-      // addBookBtn.style.zIndex = '1';
 });
 
 

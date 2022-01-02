@@ -32,6 +32,7 @@ header {
     color: #fff;
     text-decoration: underline;
     text-decoration-thickness: 5%;
+    padding: 30px;
 
 }
 
@@ -49,7 +50,7 @@ header {
     border: none;
     color: #143139;
     cursor: pointer;
-    /* animation: dropDownAnimation 1s ease; */
+    
 }
 
 .drop-down-btn:hover {
@@ -57,10 +58,11 @@ header {
 }
 
 
-@keyframes dropDownAnimation {
+@keyframes addBtnAnimation {
     from {
         opacity: 0;
         z-index: -1;
+        
     }
     
     25% {
@@ -90,6 +92,38 @@ header {
     }
 
 
+}
+
+@keyframes arrowBtnAnimation {
+    from {
+        transform: translateX(-50%) rotate(0deg)   ;
+        position: absolute;
+        left: 50%;
+        top: 82%;
+    }
+    
+    /* 25% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(60deg);
+    }
+
+    75% {
+        transform: rotate(90deg);
+    }
+
+    90% {
+        transform: rotate(150deg);
+    } */
+
+    to {
+        transform: translateX(-50%)  rotate(180deg)  ;
+        position: absolute;
+        left: 50%;
+        top: 82%;
+    }
 }
 
 
