@@ -6,7 +6,7 @@ const authorInput = document.getElementById('authorInput');
 const cardsContainer = document.getElementById('card-container');
 const removeBtn = document.getElementById('removeBtn');
 const singleCard = document.getElementById('singleCard');
-const checkBox = document.getElementById('haveRead');
+const checkBox = document.getElementById('have-read');
 const modalForm = document.getElementById('modalForm');
 const dropDownBtn = document.getElementById('drop-down-btn');
 
@@ -115,7 +115,7 @@ modalForm.reset();
 
 // Arrow drop down
 
-dropDownBtn.addEventListener('click', (e) => {
+dropDownBtn.addEventListener('click', () => {
 
 
       if (dropDownBtn.classList.contains('drop-down-btn-anim')) {

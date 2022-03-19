@@ -50,6 +50,7 @@ header {
     border: none;
     color: #143139;
     cursor: pointer;
+
     
 }
 
@@ -104,7 +105,7 @@ animation-fill-mode: forwards;
     from {
         opacity: 0;
         z-index: -1;
-        
+        top: 100%;
     }
     
     25% {
@@ -130,7 +131,7 @@ animation-fill-mode: forwards;
     to {
         opacity: 1 ;
         z-index: 1 ;
-        top: 110%;
+        top: 107%;
     }
 
 
@@ -142,10 +143,10 @@ animation-fill-mode: forwards;
     from {
         opacity: 1;
         z-index: 1;
-        top: 110%;
+        top: 109%;
     }
     
-    25% {
+    /* 25% {
         z-index: 1;
         opacity: .8;
     }
@@ -159,17 +160,18 @@ animation-fill-mode: forwards;
         z-index: 1;
         opacity: .4;
     }
+    */
 
-    90% {
-        opacity: .2;
+    /* 90% {
+        opacity: .1;
         z-index: 1;
-    }
+    }  */
 
     to {
         opacity: 0 ;
         z-index: -1 ;
         
-        top: 75%;
+        top: 100%;
     }
 
 
@@ -182,21 +184,7 @@ animation-fill-mode: forwards;
         top: 82%;
     }
     
-    /* 25% {
-        transform: rotate(30deg);
-    }
 
-    50% {
-        transform: rotate(60deg);
-    }
-
-    75% {
-        transform: rotate(90deg);
-    }
-
-    90% {
-        transform: rotate(150deg);
-    } */
 
     to {
         transform: translateX(-50%)  rotate(180deg)  ;
@@ -384,11 +372,12 @@ animation-fill-mode: forwards;
     visibility: hidden;
     font-family: 'Spline Sans', sans-serif;
     color: #fff;
+    z-index: 2;
 }
 
 .modal {
     background-color: #132C33;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     position: absolute;
     overflow: hidden;
@@ -433,6 +422,21 @@ animation-fill-mode: forwards;
 .modal-form label {
     font-size: 20px;
     margin-right: 20px;
+}
+
+.modal-form label[for=title] {
+    margin-right: 40px;
+}
+
+.have-read {
+    margin-top: 20px;
+}
+
+.have-read input {
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
 }
 
 

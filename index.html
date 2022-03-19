@@ -20,8 +20,8 @@
         <div class="add-btn-container">
             <button class="add-button" id="addBtn">Add Book</button>
         </div>
-        <button class="drop-down-btn" id="drop-down-btn"><i class="far fa-caret-square-down"></i></button>
-        <!-- <button class="down-btn" id="down-btn"><i class="far fa-caret-square-down"></i></button> -->
+        <button class="drop-down-btn" id="drop-down-btn"><i class="far fa-plus-square"></i></button>
+        <!-- <button class="down-btn" id="down-btn"><i class=" far fa-caret-square-downfas fa-caret-down"></i></button> -->
 
     </header>
 
@@ -38,15 +38,15 @@
                 <form autocomplete="off" class="modal-form" id="modalForm">
                     <div>
                         <label for="title">Title:</label>
-                        <input type="text" class="title-input" id="titleInput" name="title">
+                        <input type="text" class="title-input" id="titleInput" name="title" minlength="1" required>
                     </div>
                     <div>
                         <label for="author">Author:</label>
-                        <input type="text" class="author-input" id="authorInput" name="author">
+                        <input type="text" class="author-input" id="authorInput" name="author" minlength="1" required>
                     </div>
                     <div class="have-read">
-                        <label for="have-read">Have you read it?</label>
-                        <input class="checkbox" type="checkbox" id="haveRead" />
+                        <label for="haveRead">Have you read it?</label>
+                        <input class="checkbox" type="checkbox" id="have-read" />
                     </div>
                     <div class="btn-container">
                         <button type="submit" class="modal-add-btn" id="modalAddBtn">Add book</button>
